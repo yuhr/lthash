@@ -19,9 +19,15 @@ class LtHash<T> extends Uint8Array {
 	/**
 	 * Adds entry to the hash in place. Returns `this`.
 	 */
-	add(entry: T): LtHash<T> {
-		for (const [i, n] of this.hasher(entry).entries()) {
-			this[i] += n
+	add(entry: T | LtHash<T>): LtHash<T> {
+		if (entry instanceof LtHash) {
+			for (const [i, n] of entry.entries()) {
+				this[i] += n
+			}
+		} else {
+			for (const [i, n] of this.hasher(entry).entries()) {
+				this[i] += n
+			}
 		}
 		return this
 	}
@@ -29,9 +35,15 @@ class LtHash<T> extends Uint8Array {
 	/**
 	 * Removes entry from the hash in place. Returns `this`.
 	 */
-	remove(entry: T): LtHash<T> {
-		for (const [i, n] of this.hasher(entry).entries()) {
-			this[i] -= n
+	remove(entry: T | LtHash<T>): LtHash<T> {
+		if (entry instanceof LtHash) {
+			for (const [i, n] of entry.entries()) {
+				this[i] -= n
+			}
+		} else {
+			for (const [i, n] of this.hasher(entry).entries()) {
+				this[i] -= n
+			}
 		}
 		return this
 	}
