@@ -1,13 +1,13 @@
-$schema: https://x.nest.land/eggs@0.3.8/src/schema.json
+$schema: "https://x.nest.land/eggs@0.3.8/src/schema.json"
 name: lthash
 entry: ./src/index.ts
 description: LtHash implementation in pure JavaScript.
-homepage: https://github.com/yuhr/lthash
+homepage: "https://github.com/yuhr/lthash"
 version: 1.0.0
-unstable: true
+stable: true
 unlisted: false
 files:
-	- ./src/*.ts
+  - ./src/*.ts
 check: true
 checkFormat: false
 checkTests: false
