@@ -1,6 +1,6 @@
 {
 	"name": "lthash",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"license": "MPL-2.0",
 	"description": "LtHash implementation in pure JavaScript.",
 	"author": "Yu Shimura <mail@yuhr.org>",
