@@ -34,7 +34,7 @@ import { encode } from "https://deno.land/std/encoding/hex.ts"
 import { assertEquals } from "https://deno.land/std/testing/asserts.ts"
 import LtHash from "https://deno.land/x/lthash/LtHash.ts"
 
-Deno.test("LtHash", async () => {
+Deno.test("LtHash", () => {
 	const components = 12
 	const hasher = (entry: string) => {
 		const shake = new Shake256(components * 8)
@@ -45,14 +45,14 @@ Deno.test("LtHash", async () => {
 	const hex = (bytes: Uint8Array) => textDecoder.decode(encode(bytes))
 
 	const lthash = new LtHash(components, hasher)
-	assertEquals(hex(lthash),                 "000000000000000000000000")
-	assertEquals(hex(lthash.add("hello")),    "1234075ae4a1e77316cf2d80")
-	assertEquals(hex(lthash.add("world")),    "81325c99041731d8b089173c")
-	assertEquals(hex(lthash.remove("world")), "1234075ae4a1e77316cf2d80")
-	assertEquals(hex(lthash.remove("hello")), "000000000000000000000000")
-	assertEquals(hex(lthash.add("world")),    "6ffe553f20764a659abaeabc")
-	assertEquals(hex(lthash.add("hello")),    "81325c99041731d8b089173c")
-	assertEquals(hex(lthash.remove("world")), "1234075ae4a1e77316cf2d80")
-	assertEquals(hex(lthash.remove("hello")), "000000000000000000000000")
+	assertEquals("000000000000000000000000", hex(lthash))
+	assertEquals("1234075ae4a1e77316cf2d80", hex(lthash.add("hello")))
+	assertEquals("81325c99041731d8b089173c", hex(lthash.add("world")))
+	assertEquals("1234075ae4a1e77316cf2d80", hex(lthash.remove("world")))
+	assertEquals("000000000000000000000000", hex(lthash.remove("hello")))
+	assertEquals("6ffe553f20764a659abaeabc", hex(lthash.add("world")))
+	assertEquals("81325c99041731d8b089173c", hex(lthash.add("hello")))
+	assertEquals("1234075ae4a1e77316cf2d80", hex(lthash.remove("world")))
+	assertEquals("000000000000000000000000", hex(lthash.remove("hello")))
 })
 ```
