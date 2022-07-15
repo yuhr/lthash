@@ -8,5 +8,6 @@ node_modules
 !.husky
 !.editorconfig
 !.vscode
+!.tool-versions
 
 dist
