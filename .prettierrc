@@ -7,10 +7,6 @@
 		{
 			"files": ".*rc",
 			"options": { "parser": "json" }
-		},
-		{
-			"files": "*.md",
-			"options": { "parser": "markdown-nocjsp" }
 		}
 	]
 }

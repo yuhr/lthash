@@ -1,10 +1,11 @@
 {
 	"*.(ts|tsx|js|jsx)": [
-		"eslint . --ext .js,.ts,.jsx,.tsx --rulesdir .eslint/rules --fix",
+		"eslint --ignore-path .gitignore . --ext .js,.ts,.jsx,.tsx --fix",
 		"prettier --write",
 		"eclint fix"
 	],
-	"*.(json|yml|md|mdx)": ["prettier --write", "eclint fix"],
+	"*.(json|md|mdx)": ["prettier --write", "eclint fix"],
+	"*.(yml|yaml)": ["prettier --write"],
 	".env*": ["eclint fix"],
 	".!(env)rc": ["prettier --write", "eclint fix"],
 	".*ignore": ["eclint fix"],
