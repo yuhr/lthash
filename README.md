@@ -29,9 +29,10 @@ For Node.js, just install `lthash` from the npm registry:
 ## Usage
 
 ```ts
-import { Shake256 } from "std/hash/sha3.ts"
-import { encode } from "std/encoding/hex.ts"
-import { assertEquals } from "std/testing/asserts.ts"
+import { Shake256 } from "https://deno.land/std/hash/sha3.ts"
+import { encode } from "https://deno.land/std/encoding/hex.ts"
+import { assertEquals } from "https://deno.land/std/testing/asserts.ts"
+import LtHash from "https://deno.land/x/lthash/LtHash.ts"
 
 Deno.test("LtHash", async () => {
 	const components = 12
