@@ -10,7 +10,7 @@
 
 `lthash` provides a minimal API to construct Facebook's LtHash (see Section 2.3 of [the whitepaper](https://eprint.iacr.org/2019/227.pdf)). This package exports a single class `LtHash` that extends [`Uint8Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array).
 
-It does not depend on any other packages nor platform-specific JavaScript features, so it should work in browsers, Deno and Node.js.
+It's bundled with [`dnt`](https://github.com/denoland/dnt), so it should work in browsers, Deno and Node.js.
 
 ## Installation
 
