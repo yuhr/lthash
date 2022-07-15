@@ -52,17 +52,12 @@
 				"newlines-between": "never"
 			}
 		],
-		"unused-imports/no-unused-imports": "warn"
+		"unused-imports/no-unused-imports": "warn",
+		"consistent-default-export-name/default-export-match-filename": "error",
+		"consistent-default-export-name/default-import-match-filename": "error"
 	},
 	"globals": {
 		"globalThis": false,
 		"jest": false
-	},
-	"overrides": [
-		{
-			"rules": {
-				"import/order": "off"
-			}
-		}
-	]
+	}
 }
