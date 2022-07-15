@@ -1,7 +1,7 @@
-import LtHash from "../src/lthash.ts"
-import { Shake256 } from "std/hash/sha3.ts"
 import { encode } from "std/encoding/hex.ts"
+import { Shake256 } from "std/hash/sha3.ts"
 import { assertEquals } from "std/testing/asserts.ts"
+import LtHash from "../src/LtHash.ts"
 
 const components = 12
 const hasher = (entry: string) => {
